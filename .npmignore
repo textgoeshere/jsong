@@ -1,0 +1,7 @@
+/node_modules/
+.travis.yml
+/features/
+/tmp/
+Gemfile
+Gemfile.lock
+Guardfile

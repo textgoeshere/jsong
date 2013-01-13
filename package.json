@@ -1,0 +1,33 @@
+{
+  "name": "jsong",
+  "description": "Filter (streaming) JSON by key and/or value and display full paths to results",
+  "version": "0.0.1", 
+  "contributors": [
+    {
+      "name": "Dave Nolan",
+      "url": "http://kapoq.com"
+    }
+  ], 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/textgoeshere/jsong.git"
+  },
+  "keywords": [
+    "cli", "json", "filter", "search"
+  ],
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": "./bin/jsong",
+  "main": "./lib/jsong",
+  "dependencies": {
+    "streamin": "latest",
+    "clarinet": "latest",
+    "nopt": "latest"
+  }, 
+  "devDependencies": {
+    "jasmine-node": "latest"
+  },
+  "engines": {
+    "node": ">= 0.8"
+  }
+}

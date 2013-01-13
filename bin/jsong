@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var jsong = require("../lib/jsong")
+jsong.cli(process.argv);
