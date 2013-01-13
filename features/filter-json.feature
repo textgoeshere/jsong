@@ -12,7 +12,10 @@ Feature: filter JSON
             }
           },
           "quux": {
-            "zip": "val"
+            "zip": "val",
+            "nuffink": null
+          },
+          "empty": {
           }
         }
       """
@@ -51,6 +54,7 @@ Feature: filter JSON
       foo.bar.zip: val1
       foo.bar.zap: val2
       quux.zip: val
+      quux.nuffink: null
 
       """
 
