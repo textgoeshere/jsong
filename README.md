@@ -91,3 +91,22 @@ Display result line if the value matches the regex.
 Display path of keys/array indices to values if any of the keys or the value match the regex.
 
 * `-h`, `--help`: display help
+
+## Testing and development
+
+* Source hosted at [GitHub](https://github.com/textgoeshere/jsong)
+
+`jsong` uses`cucumber` and the Ruby library `aruba` for acceptance testing.
+
+Clone the repo and run:
+    
+    $ bundle install
+    $ cucumber
+    
+Or for continuous testing:
+    
+    $ guard    
+
+## Author
+
+[Dave Nolan](http://kapoq.com)
