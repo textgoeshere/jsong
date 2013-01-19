@@ -1,4 +1,4 @@
-# jsong
+# jsong [![Build Status](https://travis-ci.org/textgoeshere/jsong.png?branch=master)](https://travis-ci.org/textgoeshere/jsong)
 
 Filter JSON with regexen and display the complete path of keys to the results. Streaming-friendly.
 
@@ -36,24 +36,37 @@ It will return everything nested below a matching key:
 
 Filter by regex matching value with `-v`:
 
-     cat my.json | jsong -v 'val\d'
+    $ cat my.json | jsong -v 'val\d'
 
-     foo.bar.zip: val1
-     foo.bar.zap: val2
+    foo.bar.zip: val1
+    foo.bar.zap: val2
 
 Filter by regex matching key or value with `-a`:
 
-     cat my.json | jsong -a '[\w]{4}'
+    $ cat my.json | jsong -a '[\w]{4}'
 
-     foo.bar.zip: val1
-     foo.bar.zap: val2
-     quux.zip: val
+    foo.bar.zip: val1
+    foo.bar.zap: val2
+    quux.zip: val
 
 It will show paths including array indices:
 
-    cat my.json | jsong -v 5
+    $ cat my.json | jsong -v 5
 
     foo.bar.arr[4]: 5
+
+An empty document will return a special message:
+
+    $ echo '{}' | jsong
+    
+    <empty>
+    
+Empty arrays and object literals will be rendered sensibly:
+
+    $ echo '{"foo": [[{}, []]]}' | ./bin/jsong
+
+    foo[0][0]: {}
+    foo[0][1]: []
 
 ## Requirements
    
