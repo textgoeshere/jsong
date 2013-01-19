@@ -14,8 +14,6 @@ Feature: filter JSON
           "quux": {
             "zip": "val",
             "nuffink": null
-          },
-          "empty": {
           }
         }
       """
@@ -48,7 +46,7 @@ Feature: filter JSON
       """
       
     Scenario: filter by regex matching either key or value
-      When I run `jsong my.json -a '[\w]{4}'`
+      When I run `jsong my.json -a '^[\w]{4}$'`
       Then the output should contain exactly:
       """
       foo.bar.zip: val1
@@ -65,4 +63,4 @@ Feature: filter JSON
       foo.bar.arr[4]: 5
 
       """
-
+      
