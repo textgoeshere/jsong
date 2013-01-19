@@ -63,7 +63,7 @@ An empty document will return a special message:
     
 Empty arrays and object literals will be rendered sensibly:
 
-    $ echo '{"foo": [[{}, []]]}' | ./bin/jsong
+    $ echo '{"foo": [[{}, []]]}' | jsong
 
     foo[0][0]: {}
     foo[0][1]: []
